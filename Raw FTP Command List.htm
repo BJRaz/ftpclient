@@ -1,0 +1,329 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0039)http://www.nsftools.com/tips/RawFTP.htm -->
+<HTML><HEAD><TITLE>Raw FTP Command List</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<STYLE>BODY {
+	PADDING-RIGHT: 25px; PADDING-LEFT: 25px; FONT-SIZE: 0.9em; PADDING-BOTTOM: 25px; PADDING-TOP: 25px; FONT-FAMILY: Verdana, 'Lucida Grande', Geneva, Lucida, Arial, Helvetica, sans-serif
+}
+TR {
+	PADDING-RIGHT: 25px; PADDING-LEFT: 25px; FONT-SIZE: 0.9em; PADDING-BOTTOM: 25px; PADDING-TOP: 25px; FONT-FAMILY: Verdana, 'Lucida Grande', Geneva, Lucida, Arial, Helvetica, sans-serif
+}
+TD {
+	PADDING-RIGHT: 25px; PADDING-LEFT: 25px; FONT-SIZE: 0.9em; PADDING-BOTTOM: 25px; PADDING-TOP: 25px; FONT-FAMILY: Verdana, 'Lucida Grande', Geneva, Lucida, Arial, Helvetica, sans-serif
+}
+H3 {
+	BACKGROUND: #eeeeee; WIDTH: 100%
+}
+CODE {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; BACKGROUND: #eeeeff; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; FONT-FAMILY: "lucida console", monaco, "andale mono", "courier new", courier
+}
+TT {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; BACKGROUND: #eeeeff; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; FONT-FAMILY: "lucida console", monaco, "andale mono", "courier new", courier
+}
+PRE {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; BACKGROUND: #eeeeff; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; FONT-FAMILY: "lucida console", monaco, "andale mono", "courier new", courier
+}
+SAMP {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; BACKGROUND: #eeeeff; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; FONT-FAMILY: "lucida console", monaco, "andale mono", "courier new", courier
+}
+</STYLE>
+
+<META content="MSHTML 6.00.2900.3132" name=GENERATOR></HEAD>
+<BODY>
+<DIV style="PADDING-LEFT: 10px; FLOAT: right">
+<SCRIPT type=text/javascript><!--
+google_ad_client = "pub-0254740670772704";
+google_ad_width = 125;
+google_ad_height = 125;
+google_ad_format = "125x125_as";
+google_ad_channel ="8058137228";
+google_ad_type = "text";
+google_color_border = "DDDDDD";
+google_color_bg = "FFFFFF";
+google_color_link = "000000";
+google_color_url = "666666";
+google_color_text = "333333";
+//--></SCRIPT>
+
+<SCRIPT src="Raw FTP Command List-filer/show_ads.js" type=text/javascript>
+</SCRIPT>
+</DIV><BR>You are on the <A href="http://www.nsftools.com/">nsftools.com</A> 
+site 
+<P>This page originally appeared at <A 
+href="http://www.dreamhaven.org/ftp-raw.html">http://www.dreamhaven.org/ftp-raw.html</A>, 
+but the last time I looked it wasn't there any more, so I posted a local copy 
+for you here. If you were really looking for a list of commands for the 
+Microsoft Windows command-line FTP client, please <A 
+href="http://www.nsftools.com/tips/MSFTP.htm">look here</A> instead.
+<P>
+<HR>
+
+<H2>List of raw FTP commands</H2><EM>(Warning: this is a technical document, not 
+necessary for most FTP use.)</EM> 
+<P>Note that commands marked with a * are not implemented in a number of FTP 
+servers. 
+<P></P>
+<H3>Common commands</H3>
+<UL>
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#ABOR">ABOR</A> - 
+  <B>abor</B>t a file transfer 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#CWD">CWD</A> - 
+  <B>c</B>hange <B>w</B>orking <B>d</B>irectory 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#DELE">DELE</A> - 
+  <B>dele</B>te a remote file 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#LIST">LIST</A> - 
+  <B>list</B> remote files 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#MDTM">MDTM</A> - return 
+  the <B>m</B>o<B>d</B>ification <B>t</B>i<B>m</B>e of a file 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#MKD">MKD</A> - 
+  <B>m</B>a<B>k</B>e a remote <B>d</B>irectory 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#NLST">NLST</A> - 
+  <B>n</B>ame <B>l</B>i<B>st</B> of remote directory 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#PASS">PASS</A> - send 
+  <B>pass</B>word 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#PASV">PASV</A> - enter 
+  <B>pas</B>si<B>v</B>e mode 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#PORT">PORT</A> - open a 
+  data <B>port</B> 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#PWD">PWD</A> - 
+  <B>p</B>rint <B>w</B>orking <B>d</B>irectory 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#QUIT">QUIT</A> - 
+  terminate the connection 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#RETR">RETR</A> - 
+  <B>retr</B>ieve a remote file 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#RMD">RMD</A> - 
+  <B>r</B>e<B>m</B>ove a remote <B>d</B>irectory 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#RNFR">RNFR</A> - 
+  <B>r</B>e<B>n</B>ame <B>fr</B>om 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#RNTO">RNTO</A> - 
+  <B>r</B>e<B>n</B>ame <B>to</B> 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#SITE">SITE</A> - 
+  <B>site</B>-specific commands 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#SIZE">SIZE</A> - return 
+  the <B>size</B> of a file 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#STOR">STOR</A> - 
+  <B>stor</B>e a file on the remote host 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#TYPE">TYPE</A> - set 
+  transfer <B>type</B> 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#USER">USER</A> - send 
+  <B>user</B>name </LI></UL>
+<H3>Less common commands</H3>
+<UL>
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#ACCT">ACCT</A>* - send 
+  <B>acc</B>oun<B>t</B> information 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#APPE">APPE</A> - 
+  <B>appe</B>nd to a remote file 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#CDUP">CDUP</A> - CWD to 
+  the parent of the current directory 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#HELP">HELP</A> - return 
+  <B>help</B> on using the server 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#MODE">MODE</A> - set 
+  transfer <B>mode</B> 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#NOOP">NOOP</A> - do 
+  nothing 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#REIN">REIN</A>* - 
+  <B>rein</B>itialize the connection 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#STAT">STAT</A> - return 
+  server <B>stat</B>us 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#STOU">STOU</A> - 
+  <B>sto</B>re a file <B>u</B>niquely 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#STRU">STRU</A> - set file 
+  transfer <B>stru</B>cture 
+  <LI><A href="http://www.nsftools.com/tips/RawFTP.htm#SYST">SYST</A> - return 
+  <B>syst</B>em type </LI></UL>
+<HR>
+<A name=ABOR></A>
+<H3>ABOR</H3><I>Syntax:</I> <SAMP>ABOR</SAMP> 
+<P>Aborts a file transfer currently in progress. 
+<P><A name=ACCT></A></P>
+<H3>ACCT*</H3><I>Syntax:</I> <SAMP>ACCT <I>account-info</I></SAMP> 
+<P>This command is used to send account information on systems that require it. 
+Typically sent after a <A 
+href="http://www.nsftools.com/tips/RawFTP.htm#PASS">PASS</A> command. 
+<P><A name=ALLO></A></P>
+<H3>ALLO</H3><I>Syntax:</I> <SAMP>ALLO <I>size</I> [R 
+<I>max-record-size</I>]</SAMP> 
+<P>Allocates sufficient storage space to receive a file. If the maximum size of 
+a record also needs to be known, that is sent as a second numeric parameter 
+following a space, the capital letter "R", and another space. 
+<P><A name=APPE></A></P>
+<H3>APPE</H3><I>Syntax:</I> <SAMP>APPE <I>remote-filename</I></SAMP> 
+<P>Append data to the end of a file on the remote host. If the file does not 
+already exist, it is created. This command must be preceded by a <A 
+href="http://www.nsftools.com/tips/RawFTP.htm#PORT">PORT</A> or <A 
+href="http://www.nsftools.com/tips/RawFTP.htm#PASV">PASV</A> command so that the 
+server knows where to receive data from. 
+<P><A name=CDUP></A></P>
+<H3>CDUP</H3><I>Syntax:</I> <SAMP>CDUP</SAMP> 
+<P>Makes the parent of the current directory be the current directory. 
+<P><A name=CWD></A></P>
+<H3>CWD</H3><I>Syntax:</I> <SAMP>CWD <I>remote-directory</I></SAMP> 
+<P>Makes the given directory be the current directory on the remote host. 
+<P><A name=DELE></A></P>
+<H3>DELE</H3><I>Syntax:</I> <SAMP>DELE <I>remote-filename</I></SAMP> 
+<P>Deletes the given file on the remote host. 
+<P><A name=HELP></A></P>
+<H3>HELP</H3><I>Syntax:</I> <SAMP>HELP [<I>command</I>]</SAMP> 
+<P>If a <I>command</I> is given, returns help on that command; otherwise, 
+returns general help for the FTP server (usually a list of supported commands). 
+<P><A name=LIST></A></P>
+<H3>LIST</H3><I>Syntax:</I> <SAMP>LIST [<I>remote-filespec</I>]</SAMP> 
+<P>If <I>remote-filespec</I> refers to a file, sends information about that 
+file. If <I>remote-filespec</I> refers to a directory, sends information about 
+each file in that directory. <I>remote-filespec</I> defaults to the current 
+directory. This command must be preceded by a <A 
+href="http://www.nsftools.com/tips/RawFTP.htm#PORT">PORT</A> or <A 
+href="http://www.nsftools.com/tips/RawFTP.htm#PASV">PASV</A> command. 
+<P><A name=MDTM></A></P>
+<H3>MDTM</H3><I>Syntax:</I> <SAMP>MDTM <I>remote-filename</I></SAMP> 
+<P>Returns the last-modified time of the given file on the remote host in the 
+format "<SAMP>YYYYMMDDhhmmss</SAMP>": <SAMP>YYYY</SAMP> is the four-digit year, 
+<SAMP>MM</SAMP> is the month from 01 to 12, <SAMP>DD</SAMP> is the day of the 
+month from 01 to 31, <SAMP>hh</SAMP> is the hour from 00 to 23, <SAMP>mm</SAMP> 
+is the minute from 00 to 59, and <SAMP>ss</SAMP> is the second from 00 to 59. 
+<P><A name=MKD></A></P>
+<H3>MKD</H3><I>Syntax:</I> <SAMP>MKD <I>remote-directory</I></SAMP> 
+<P>Creates the named directory on the remote host. 
+<P><A name=MODE></A></P>
+<H3>MODE</H3><I>Syntax:</I> <SAMP>MODE <I>mode-character</I></SAMP> 
+<P>Sets the transfer mode to one of: 
+<UL>
+  <LI>S - Stream 
+  <LI>B - Block 
+  <LI>C - Compressed </LI></UL>The default mode is Stream. 
+<P><A name=NLST></A></P>
+<H3>NLST</H3><I>Syntax:</I> <SAMP>NLST [<I>remote-directory</I>]</SAMP> 
+<P>Returns a list of filenames in the given directory (defaulting to the current 
+directory), with no other information. Must be preceded by a <A 
+href="http://www.nsftools.com/tips/RawFTP.htm#PORT">PORT</A> or <A 
+href="http://www.nsftools.com/tips/RawFTP.htm#PASV">PASV</A> command. 
+<P><A name=NOOP></A></P>
+<H3>NOOP</H3><I>Syntax:</I> <SAMP>NOOP</SAMP> 
+<P>Does nothing except return a response. 
+<P><A name=PASS></A></P>
+<H3>PASS</H3><I>Syntax:</I> <SAMP>PASS <I>password</I></SAMP> 
+<P>After sending the <A 
+href="http://www.nsftools.com/tips/RawFTP.htm#USER">USER</A> command, send this 
+command to complete the login process. (Note, however, that an <A 
+href="http://www.nsftools.com/tips/RawFTP.htm#ACCT">ACCT</A> command may have to 
+be used on some systems.) 
+<P><A name=PASV></A></P>
+<H3>PASV</H3><I>Syntax:</I> <SAMP>PASV</SAMP> 
+<P>Tells the server to enter "passive mode". In passive mode, the server will 
+wait for the client to establish a connection with it rather than attempting to 
+connect to a client-specified port. The server will respond with the address of 
+the port it is listening on, with a message like:<BR><SAMP>227 Entering Passive 
+Mode 
+(<I>a1</I>,<I>a2</I>,<I>a3</I>,<I>a4</I>,<I>p1</I>,<I>p2</I>)</SAMP><BR>where 
+<I>a1</I>.<I>a2</I>.<I>a3</I>.<I>a4</I> is the IP address and 
+<I>p1</I>*256+<I>p2</I> is the port number. 
+<P><A name=PORT></A></P>
+<H3>PORT</H3><I>Syntax:</I> <SAMP>PORT 
+<I>a1</I>,<I>a2</I>,<I>a3</I>,<I>a4</I>,<I>p1</I>,<I>p2</I></SAMP> 
+<P>Specifies the host and port to which the server should connect for the next 
+file transfer. This is interpreted as IP address 
+<I>a1</I>.<I>a2</I>.<I>a3</I>.<I>a4</I>, port <I>p1</I>*256+<I>p2</I>. 
+<P><A name=PWD></A></P>
+<H3>PWD</H3><I>Syntax:</I> <SAMP>PWD</SAMP> 
+<P>Returns the name of the current directory on the remote host. 
+<P><A name=QUIT></A></P>
+<H3>QUIT</H3><I>Syntax:</I> <SAMP>QUIT</SAMP> 
+<P>Terminates the command connection. 
+<P><A name=REIN></A></P>
+<H3>REIN*</H3><I>Syntax:</I> <SAMP>REIN</SAMP> 
+<P>Reinitializes the command connection - cancels the current 
+user/password/account information. Should be followed by a <A 
+href="http://www.nsftools.com/tips/RawFTP.htm#USER">USER</A> command for another 
+login. 
+<P><A name=REST></A></P>
+<H3>REST</H3><I>Syntax:</I> <SAMP>REST <I>position</I></SAMP> 
+<P>Sets the point at which a file transfer should start; useful for resuming 
+interrupted transfers. For nonstructured files, this is simply a decimal number. 
+This command must immediately precede a data transfer command (<A 
+href="http://www.nsftools.com/tips/RawFTP.htm#RETR">RETR</A> or <A 
+href="http://www.nsftools.com/tips/RawFTP.htm#STOR">STOR</A> only); i.e. it must 
+come after any <A href="http://www.nsftools.com/tips/RawFTP.htm#PORT">PORT</A> 
+or <A href="http://www.nsftools.com/tips/RawFTP.htm#PASV">PASV</A> command. 
+<P><A name=RETR></A></P>
+<H3>RETR</H3><I>Syntax:</I> <SAMP>RETR <I>remote-filename</I></SAMP> 
+<P>Begins transmission of a file from the remote host. Must be preceded by 
+either a <A href="http://www.nsftools.com/tips/RawFTP.htm#PORT">PORT</A> command 
+or a <A href="http://www.nsftools.com/tips/RawFTP.htm#PASV">PASV</A> command to 
+indicate where the server should send data. 
+<P><A name=RMD></A></P>
+<H3>RMD</H3><I>Syntax:</I> <SAMP>RMD <I>remote-directory</I></SAMP> 
+<P>Deletes the named directory on the remote host. 
+<P><A name=RNFR></A></P>
+<H3>RNFR</H3><I>Syntax:</I> <SAMP>RNFR <I>from-filename</I></SAMP> 
+<P>Used when renaming a file. Use this command to specify the file to be 
+renamed; follow it with an <A 
+href="http://www.nsftools.com/tips/RawFTP.htm#RNTO">RNTO</A> command to specify 
+the new name for the file. 
+<P><A name=RNTO></A></P>
+<H3>RNTO</H3><I>Syntax:</I> <SAMP>RNTO <I>to-filename</I></SAMP> 
+<P>Used when renaming a file. After sending an <A 
+href="http://www.nsftools.com/tips/RawFTP.htm#RNFR">RNFR</A> command to specify 
+the file to rename, send this command to specify the new name for the file. 
+<P><A name=SITE></A></P>
+<H3>SITE*</H3><I>Syntax:</I> <SAMP>SITE <I>site-specific-command</I></SAMP> 
+<P>Executes a site-specific command. 
+<P><A name=SIZE></A></P>
+<H3>SIZE</H3><I>Syntax:</I> <SAMP>SIZE <I>remote-filename</I></SAMP> 
+<P>Returns the size of the remote file as a decimal number. 
+<P><A name=STAT></A></P>
+<H3>STAT</H3><I>Syntax:</I> <SAMP>STAT [<I>remote-filespec</I>]</SAMP> 
+<P>If invoked without parameters, returns general status information about the 
+FTP server process. If a parameter is given, acts like the <A 
+href="http://www.nsftools.com/tips/RawFTP.htm#LIST">LIST</A> command, except 
+that data is sent over the control connection (no <A 
+href="http://www.nsftools.com/tips/RawFTP.htm#PORT">PORT</A> or <A 
+href="http://www.nsftools.com/tips/RawFTP.htm#PASV">PASV</A> command is 
+required). 
+<P><A name=STOR></A></P>
+<H3>STOR</H3><I>Syntax:</I> <SAMP>STOR <I>remote-filename</I></SAMP> 
+<P>Begins transmission of a file to the remote site. Must be preceded by either 
+a <A href="http://www.nsftools.com/tips/RawFTP.htm#PORT">PORT</A> command or a 
+<A href="http://www.nsftools.com/tips/RawFTP.htm#PASV">PASV</A> command so the 
+server knows where to accept data from. 
+<P><A name=STOU></A></P>
+<H3>STOU</H3><I>Syntax:</I> <SAMP>STOU</SAMP> 
+<P>Begins transmission of a file to the remote site; the remote filename will be 
+unique in the current directory. The response from the server will include the 
+filename. 
+<P><A name=STRU></A></P>
+<H3>STRU</H3><I>Syntax:</I> <SAMP>STRU <I>structure-character</I></SAMP> 
+<P>Sets the file structure for transfer to one of: 
+<UL>
+  <LI>F - File (no structure) 
+  <LI>R - Record structure 
+  <LI>P - Page structure </LI></UL>The default structure is File. 
+<P><A name=SYST></A></P>
+<H3>SYST</H3><I>Syntax:</I> <SAMP>SYST</SAMP> 
+<P>Returns a word identifying the system, the word "Type:", and the default 
+transfer type (as would be set by the <A 
+href="http://www.nsftools.com/tips/RawFTP.htm#TYPE">TYPE</A> command). For 
+example: <SAMP>UNIX Type: L8</SAMP> 
+<P><A name=TYPE></A></P>
+<H3>TYPE</H3><I>Syntax:</I> <SAMP>TYPE <I>type-character</I> 
+[<I>second-type-character</I>]</SAMP> 
+<P>Sets the type of file to be transferred. <I>type-character</I> can be any of: 
+
+<UL>
+  <LI>A - ASCII text 
+  <LI>E - EBCDIC text 
+  <LI>I - image (binary data) 
+  <LI>L - local format </LI></UL>For A and E, the <I>second-type-character</I> 
+specifies how the text should be interpreted. It can be: 
+<UL>
+  <LI>N - Non-print (not destined for printing). This is the default if 
+  <I>second-type-character</I> is omitted. 
+  <LI>T - Telnet format control (<SAMP>&lt;CR&gt;</SAMP>, 
+  <SAMP>&lt;FF&gt;</SAMP>, etc.) 
+  <LI>C - ASA Carriage Control </LI></UL>For L, the <I>second-type-character</I> 
+specifies the number of bits per byte on the local system, and may not be 
+omitted. 
+<P><A name=USER></A></P>
+<H3>USER</H3><I>Syntax:</I> <SAMP>USER <I>username</I></SAMP> 
+<P>Send this command to begin the login process. <I>username</I> should be a 
+valid username on the system, or "anonymous" to initiate an anonymous login. 
+<P></P></BODY></HTML>

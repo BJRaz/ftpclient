@@ -1,0 +1,62 @@
+/* FTP pre/post conditions */
+
+
+Foreløbige krav:
+
+Nemt og forståeligt konsol-interface
+mulighed for flere end en dataforbindelse / download (tråde)
+angivelse af host og port 
+understøttelse af aktiv/passiv mode
+ved aktiv mode åbnes som standard port 20 (command-forbindelse - 1)
+
+droppes command-forbindelsen, skal igangværende datadownloads ikke afbrydes.
+event-styret kommunikation (forbindelse oprettet, droppet o.s.v)
+
+Metoder:
+
+connect/open	starter command-forb.
+disconnect
+list
+parent
+cd 
+download
+upload
+mode 			aktiv/passiv
+
+
+connect:
+
+skaber command-forbindelse
+skal understøtte asynchron kommunikation
+angiver hostname, og optional portnummer
+
+
+
+
+disconnect:
+
+hvis command-forbindelsen er aktiv, afbryd den
+
+list:
+
+Vis liste af filer på ftp-serveren
+
+parent:
+
+gå et niveau op
+
+cd:
+
+gå ind i mappe
+
+download:
+
+hent angivne remote-fil og læg i angivne lokale-mappe
+
+upload:
+
+upload angive lokale fil til remote fil.
+
+mode:
+
+Sæt mode til aktiv eller passiv.
